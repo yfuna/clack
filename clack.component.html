@@ -1,4 +1,4 @@
-<html><head><link href="doc.css" rel="stylesheet" type="text/css"></head><body><h1>NAME</h1><p>Clack.Component - Base Class for Clack Component. </p><h1>SYNOPSIS</h1><pre><code>(in-package :cl-user)  
+<html><head><link href="doc.css" rel="stylesheet" type="text/css"></head><body><h1>Clack.Component - Base Class for Clack Component. </h1><h2>SYNOPSIS</h2><pre><code>(in-package :cl-user)  
 (defpackage clack.app.example  
   (:use :cl :clack)  
   (:export :&lt;clack-app-example&gt;))  
@@ -7,4 +7,4 @@
 (defclass &lt;clack-app-example&gt; (&lt;component&gt;) ())  
 (defmethod call ((this &lt;clack-app-example&gt;) req)  
   (declare (ignore this req))  
-  `(200 (:content-type "text/plain") ("Hello, World!"))) </code></pre><h1>DESCRIPTION</h1><p>Clack.Component is the base class shared between Clack.Middleware and Clack Application. </p><p>You must implement `clack.component:call' as a method which is called when HTTP request coming and returns a response. </p><h1>AUTHOR</h1><ul><li>Eitarow Fukamachi (e.arrows@gmail.com)</li></ul><h1>SEE ALSO</h1><ul><li>Clack.Middleware</li></ul><h1>EXTERNAL SYMBOLS</h1><ul><li>Class: &lt;component&gt; inherits (standard-object)</li><li>Generic: call [comp req]<pre> Invoke component. Designed to override in subclasses.</pre></li><li>Method: call [(app function) req]<pre> Functions should be called like Component.</pre></li><li>Method: make-app [(comp &lt;component&gt;)]<pre> Create a function to call this component.</pre></li></ul></body></html>
+  `(200 (:content-type "text/plain") ("Hello, World!"))) </code></pre><h2>DESCRIPTION</h2><p>Clack.Component is the base class shared between Clack.Middleware and Clack Application. </p><p>You must implement `clack.component:call' as a method which is called when HTTP request coming and returns a response. </p><h2>AUTHOR</h2><ul><li>Eitarow Fukamachi (e.arrows@gmail.com)</li></ul><h2>SEE ALSO</h2><ul><li>Clack.Middleware</li></ul><h2>EXTERNAL SYMBOLS</h2><ul><li>Class: &lt;component&gt; inherits (standard-object)</li><li>Generic: call [comp req]<pre> Invoke component. Designed to override in subclasses.</pre></li><li>Method: call [(app function) req]<pre> Functions should be called like Component.</pre></li><li>Method: make-app [(comp &lt;component&gt;)]<pre> Create a function to call this component.</pre></li></ul></body></html>

@@ -1,4 +1,4 @@
-<html><head><link href="doc.css" rel="stylesheet" type="text/css"></head><body><h1>NAME</h1><p>Clack.App.Route - URL dispatcher. </p><h1>SYNOPSIS</h1><pre><code>(defpackage clack-sample  
+<html><head><link href="doc.css" rel="stylesheet" type="text/css"></head><body><h1>Clack.App.Route - URL dispatcher. </h1><h2>SYNOPSIS</h2><pre><code>(defpackage clack-sample  
   (:use :cl  
         :clack  
         :clack.app.route))  
@@ -10,4 +10,4 @@
   (POST "/login" #'authorize)  
   (GET "/member/:id" #'member))  
  
-(clackup #'app) </code></pre><h1>DESCRIPTION</h1><p>Clack.App.Route provides an URL based dispacher, inspired by Ruby's Sinatra. </p><h1>AUTHOR</h1><ul><li>Tomohiro Matsuyama (tomo@cx4a.org)</li></ul><h1>EXTERNAL SYMBOLS</h1><ul><li>Function: defroutes [name &amp;body routes &amp;aux (otherwise (last routes))]</li></ul></body></html>
+(clackup #'app) </code></pre><h2>DESCRIPTION</h2><p>Clack.App.Route provides an URL based dispacher, inspired by Ruby's Sinatra. </p><h2>AUTHOR</h2><ul><li>Tomohiro Matsuyama (tomo@cx4a.org)</li></ul><h2>EXTERNAL SYMBOLS</h2><ul><li>Function: defroutes [name &amp;body routes &amp;aux (otherwise (last routes))]</li></ul></body></html>
