@@ -1,0 +1,21 @@
+<h1>NAME</h1><p>Clack.Response - Portable HTTP Response object for Clack response. </p><h1>SYNOPSIS</h1><pre><code>(defvar res nil)  
+ 
+(setf res (make-response 200))  
+(setf res (make-response 200 '(:content-type "text/html")))  
+(setf res (make-response 200 '(:content-type "text/html") '("aiueo")))  
+ 
+;; Access each fields  
+(status res)  
+;;=&gt; 200  
+(headers res)  
+;;=&gt; (:content-type "text/html")  
+(headers res :content-type)  
+;;=&gt; "text/html"  
+(body res)  
+;;=&gt; ("aiueo")  
+ 
+;; Set to each fields  
+(setf (status res) 304)  
+(setf (headers res :content-type) "text/plain")  
+(setf (body res) '("moved"))  
+(setf (body res) "moved") ;; string also allowed </code></pre><h1>DESCRIPTION</h1><p>Clack.Response allows you a way to create Clack response. </p><h1>AUTHOR</h1><ul><li>Eitarow Fukamachi (e.arrows@gmail.com)</li></ul><h1>EXTERNAL SYMBOLS</h1><ul><li><p>Class: &lt;response&gt; inherits (standard-object) [status headers body set-cookies]</p><li><p>Method: initialize-instance [(res &lt;response&gt;) &amp;key]</p></li><li><p>Function: make-response [&amp;optional status headers body]</p></li></li><p>A synonym for (make-instance '<response>  ...). Create a <response>  instance. </p><li>Method: headers [(res &lt;response&gt;) &amp;optional name]</li><p>Get whole of headers or header value of given name. </p><p>Example:   (headers res)   ;;=&gt; (:content-type "text/plain")   (headers res :content-type)   ;;=&gt; "text/plain" </p><li>Method: push-header [(res &lt;response&gt;) name value]<p>Push the given header pair into response headers. Example: (push-header res :content-type "text/html") </p></li><li>Method: set-cookies [(res &lt;response&gt;) &amp;optional name]<p>Get whole of set-cookies plist or the set-cookie value of given name. </p></li><p>Example:   (set-cookies res)   ;;=&gt; (:hoge "1")   (set-cookies res :hoge)   ;;=&gt; "1" </p><li>Method: redirect [(res &lt;response&gt;) url &amp;optional (status 302)]</li><p>Set headers for redirecting to given url. </p><li>Method: finalize [(res &lt;response&gt;)]</li><p>Return a Clack response list containing three values, status, headers and body. </p></ul>

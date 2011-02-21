@@ -1,0 +1,15 @@
+<h1>NAME</h1><p>Clack.Builder - Clack utility to build up from some Middleware and Application into one function. </p><h1>SYNOPSIS</h1><pre><code>(builder  
+ &lt;clack.middleware.logger&gt;  
+ (&lt;clack.middleware.static&gt;  
+  :path "/public/"  
+  :root #p"/static-files/")  
+ app) </code></pre><h1>DESCRIPTION</h1><p>Clack.Builder allows you to write middlewares inline. It builds up with calling `wrap' of middlewares sequencially and returns a function also as an Application. </p><p>The following example is: </p><pre><code>(builder  
+ &lt;clack.middleware.logger&gt;  
+ (&lt;clack.middleware.static&gt;  
+  :path "/public/"  
+  :root #p"/static-files/")  
+ app) </code></pre><p>same as below one. </p><pre><code>(wrap (make-instance '&lt;clack.middleware.logger&gt;)  
+      (wrap (make-instance '&lt;clack.middleware.static&gt;  
+               :path "/public/"  
+               :root #p"/static-files/")  
+            app)) </code></pre><p><code>builder-lazy' is almost same as </code>builder', but it builds up every time when the Application calls. </p><h1>AUTHOR</h1><ul><li>Eitarow Fukamachi (e.arrows@gmail.com)</li></ul><h1>SEE ALSO</h1><ul><li>Clack.Middleware</li></ul><h1>EXTERNAL SYMBOLS</h1><ul><li><p>Function: builder [&amp;rest app-or-middleware]</p></li><li>Function: builder-lazy [&amp;rest app-or-middleware]</li></ul>

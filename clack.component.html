@@ -1,0 +1,10 @@
+<h1>NAME</h1><p>Clack.Component - Base Class for Clack Component. </p><h1>SYNOPSIS</h1><pre><code>(in-package :cl-user)  
+(defpackage clack.app.example  
+  (:use :cl :clack)  
+  (:export :&lt;clack-app-example&gt;))  
+(in-package :clack.app.example)  
+ 
+(defclass &lt;clack-app-example&gt; (&lt;component&gt;) ())  
+(defmethod call ((this &lt;clack-app-example&gt;) req)  
+  (declare (ignore this req))  
+  `(200 (:content-type "text/plain") ("Hello, World!"))) </code></pre><h1>DESCRIPTION</h1><p>Clack.Component is the base class shared between Clack.Middleware and Clack Application. </p><p>You must implement `clack.component:call' as a method which is called when HTTP request coming and returns a response. </p><h1>AUTHOR</h1><ul><li>Eitarow Fukamachi (e.arrows@gmail.com)</li></ul><h1>SEE ALSO</h1><ul><li>Clack.Middleware</li></ul><h1>EXTERNAL SYMBOLS</h1><ul><li><p>Class: &lt;component&gt; inherits (standard-object)</p><li><p>Generic: call [comp req]</p></li></li><p>Invoke component. Designed to override in subclasses. </p><li>Method: call [(app function) req]</li><p>Functions should be called like Component. </p><li>Method: make-app [(comp &lt;component&gt;)]</li><p>Create a function to call this component. </p></ul>

@@ -1,0 +1,20 @@
+<h1>NAME</h1><p>Clack.Util.Doc - For writing Clack documentations. </p><h1>SYNOPSIS</h1><pre><code>;; Clear documentation of `*package*'.  
+(doc:start)  
+ 
+(doc:NAME "  
+Clack - Web Application Environment for Common Lisp  
+")  
+ 
+(doc:DESCRIPTION "  
+Clack is a Web Application Environment for Common Lisp inspired by Python's WSGI and Ruby's Rack. Your awesome framework should base on this.  
+")  
+ 
+;; I recommend to use with cl-annot (https://github.com/arielnetworks/cl-annot).  
+;; It allows you to write docs by annotation-style.  
+(cl-annot:enable-annot-syntax)  
+ 
+(doc:start)  
+ 
+@doc:NAME "  
+Clack - Web Application Environment for Common Lisp  
+" </code></pre><h1>DESCRIPTION</h1><p>Clack.Util.Doc enables easy writing package documentations with Markdown. </p><h1>AUTHOR</h1><ul><li>Eitarow Fukamachi (e.arrows@gmail.com)</li></ul><h1>SEE ALSO</h1><ul><li><a href="https://github.com/arielnetworks/cl-annot">cl-annot</a></li></ul><h1>EXTERNAL SYMBOLS</h1><ul><li><p>Variable: *section-plist*</p><li><p>Function: start</p></li></li><p>Clear the docstring of <code>*package*'. I recommend you to put </code>(doc:start)' before calling doc functions, because they append sections duplicately when the packaged is reloaded. </p><li>Function: doc [header string &amp;optional (level 1)]</li><p>Set documentation to current package </p><li><p>Function: section [header string &amp;optional (level 1)]</p></li><li><p>Function: name [string]</p></li><li><p>Function: synopsis [string]</p></li><li><p>Function: explanation [string]</p></li><li><p>Function: dependencies [string]</p></li><li><p>Function: description [string]</p></li><li><p>Function: example [string]</p></li><li><p>Function: see [string]</p></li><li><p>Function: author [string]</p></li><li><p>Function: contributors [string]</p></li><li><p>Function: copyright [string]</p></li><li>Function: license [string]</li></ul>

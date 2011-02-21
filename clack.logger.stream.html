@@ -1,0 +1,6 @@
+<h1>NAME</h1><p>Clack.Logger.Stream - Output log messages to stream. </p><h1>SYNOPSIS</h1><pre><code>(clackup (builder  
+          (&lt;clack-middleware-logger&gt;  
+           :logger (make-instance '&lt;clack-logger-stream&gt;))  
+          (lambda (req)  
+            (log-message :notice "You've got an access!")  
+            '(200 nil ("ok"))))) </code></pre><h1>DESCRIPTION</h1><p>Clack.Logger.Stream is a logger outputs log messages to stream, `<em>standard-output</em>' for default. </p><p>This logger is used in Clack.Middleware.Logger as a default logger. </p><h1>AUTHOR</h1><p>Eitarow Fukamachi (e.arrows@gmail.com) </p><h1>SEE ALSO</h1><ul><li>Clack.Logger.Base</li><li>Clack.Middleware.Logger</li><li>Clack.Logger</li></ul><h1>EXTERNAL SYMBOLS</h1><ul><li><p>Class: &lt;clack-logger-stream&gt; inherits (&lt;clack-logger-base&gt;) [output-stream]</p><li><p>Method: output [(this &lt;clack-logger-stream&gt;)]</p></li></li><p>Output log messages to 'output-stream' in this slot. </p></ul>

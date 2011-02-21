@@ -1,0 +1,13 @@
+<h1>NAME</h1><p>Clack.App.Route - URL dispatcher. </p><h1>SYNOPSIS</h1><pre><code>(defpackage clack-sample  
+  (:use :cl  
+        :clack  
+        :clack.app.route))  
+(in-package :clack-sample)  
+ 
+(defroute app (req)  
+  (GET "/" #'index)  
+  (GET "/login" #'login)  
+  (POST "/login" #'authorize)  
+  (GET "/member/:id" #'member))  
+ 
+(clackup #'app) </code></pre><h1>DESCRIPTION</h1><p>Clack.App.Route provides an URL based dispacher, inspired by Ruby's Sinatra. </p><h1>AUTHOR</h1><ul><li>Tomohiro Matsuyama (tomo@cx4a.org)</li></ul><h1>EXTERNAL SYMBOLS</h1><ul><li>Function: defroutes [name &amp;body routes &amp;aux (otherwise (last routes))]</li></ul>
