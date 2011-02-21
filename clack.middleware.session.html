@@ -1,4 +1,4 @@
-<h1>NAME</h1><p>Clack.Middleware.Session - Middleware for session management. </p><h1>SYNOPSIS</h1><pre><code>(clackup (builder  
+<html><head><link href="doc.css" rel="stylesheet" type="text/css"></head><body><h1>NAME</h1><p>Clack.Middleware.Session - Middleware for session management. </p><h1>SYNOPSIS</h1><pre><code>(clackup (builder  
           (&lt;clack-middleware-session&gt;  
            :state (make-instance '&lt;clack-session-state-cookie&gt;))  
           (lambda (req)  
@@ -7,4 +7,4 @@
             `(200  
               (:content-type "text/plain")  
               (,(format nil "Hello, you've been here for ~Ath times!"  
-                        (incf (gethash :counter (getf req :clack.session))))))))) </code></pre><h1>DESCRIPTION</h1><p>Clack.Middleware.Session provides you session interface. By default this will use cookies to keep session state and store data in memory. </p><p>You can change this behavior to inherit <code>&lt;clack-session-state&gt;' and </code><clack-session-store>'. </p><p>Note the `:clack.session' is a hash table, not a plist, because plist cannot keep state between functions. </p><h1>AUTHOR</h1><p>Eitarow Fukamachi (e.arrows@gmail.com) </p><h1>SEE ALSO</h1><ul><li>Clack.Session.State</li><li>Clack.Session.Store</li></ul><h1>EXTERNAL SYMBOLS</h1><ul><li>Class: &lt;clack-middleware-session&gt; inherits (&lt;middleware&gt;) [app state store]</li><li>Method: call [(this &lt;clack-middleware-session&gt;) req]</li></ul>
+                        (incf (gethash :counter (getf req :clack.session))))))))) </code></pre><h1>DESCRIPTION</h1><p>Clack.Middleware.Session provides you session interface. By default this will use cookies to keep session state and store data in memory. </p><p>You can change this behavior to inherit <code>&lt;clack-session-state&gt;' and </code><clack-session-store>'. </p><p>Note the `:clack.session' is a hash table, not a plist, because plist cannot keep state between functions. </p><h1>AUTHOR</h1><p>Eitarow Fukamachi (e.arrows@gmail.com) </p><h1>SEE ALSO</h1><ul><li>Clack.Session.State</li><li>Clack.Session.Store</li></ul><h1>EXTERNAL SYMBOLS</h1><ul><li>Class: &lt;clack-middleware-session&gt; inherits (&lt;middleware&gt;) [app state store]</li><li>Method: call [(this &lt;clack-middleware-session&gt;) req]</li></ul></body></html>

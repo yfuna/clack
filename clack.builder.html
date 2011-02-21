@@ -1,4 +1,4 @@
-<h1>NAME</h1><p>Clack.Builder - Clack utility to build up from some Middleware and Application into one function. </p><h1>SYNOPSIS</h1><pre><code>(builder  
+<html><head><link href="doc.css" rel="stylesheet" type="text/css"></head><body><h1>NAME</h1><p>Clack.Builder - Clack utility to build up from some Middleware and Application into one function. </p><h1>SYNOPSIS</h1><pre><code>(builder  
  &lt;clack.middleware.logger&gt;  
  (&lt;clack.middleware.static&gt;  
   :path "/public/"  
@@ -12,4 +12,4 @@
       (wrap (make-instance '&lt;clack.middleware.static&gt;  
                :path "/public/"  
                :root #p"/static-files/")  
-            app)) </code></pre><p><code>builder-lazy' is almost same as </code>builder', but it builds up every time when the Application calls. </p><h1>AUTHOR</h1><ul><li>Eitarow Fukamachi (e.arrows@gmail.com)</li></ul><h1>SEE ALSO</h1><ul><li>Clack.Middleware</li></ul><h1>EXTERNAL SYMBOLS</h1><ul><li>Function: builder [&amp;rest app-or-middleware]</li><li>Function: builder-lazy [&amp;rest app-or-middleware]</li></ul>
+            app)) </code></pre><p><code>builder-lazy' is almost same as </code>builder', but it builds up every time when the Application calls. </p><h1>AUTHOR</h1><ul><li>Eitarow Fukamachi (e.arrows@gmail.com)</li></ul><h1>SEE ALSO</h1><ul><li>Clack.Middleware</li></ul><h1>EXTERNAL SYMBOLS</h1><ul><li>Function: builder [&amp;rest app-or-middleware]</li><li>Function: builder-lazy [&amp;rest app-or-middleware]</li></ul></body></html>

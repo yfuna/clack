@@ -1,4 +1,4 @@
-<h1>NAME</h1><p>Clack.Handler.Hunchentoot - Clack handler for Hunchentoot. </p><h1>SYNOPSIS</h1><pre><code>(defpackage clack-test  
+<html><head><link href="doc.css" rel="stylesheet" type="text/css"></head><body><h1>NAME</h1><p>Clack.Handler.Hunchentoot - Clack handler for Hunchentoot. </p><h1>SYNOPSIS</h1><pre><code>(defpackage clack-test  
   (:use :cl  
         :clack.handler.hunchentoot))  
 (in-package :clack-test)  
@@ -6,4 +6,4 @@
 ;; Start Server  
 (run (lambda (req)  
        '(200 nil ("ok")))  
-     :port 8080) </code></pre><h1>DESCRIPTION</h1><p>Clack.Handler.Hunchentoot is a Clack handler for Hunchentoot, Lisp web server. This package exports <code>run' and </code>stop'. </p><h1>AUTHOR</h1><p>Eitarow Fukamachi (e.arrows@gmail.com) </p><h1>EXTERNAL SYMBOLS</h1><ul><li>Function: run [app &amp;key debug (port 8080)]<pre> Start Hunchentoot server.</pre></li><li>Function: stop [acceptor]<pre> Stop Hunchentoot server.<br /> If no acceptor given, try to stop `*acceptor*' by default.</pre></li><li>Method: process-connection [(*acceptor* &lt;debuggable-acceptor&gt;) (socket t)]</li><li>Method: acceptor-request-dispatcher [(*acceptor* &lt;debuggable-acceptor&gt;)]</li></ul>
+     :port 8080) </code></pre><h1>DESCRIPTION</h1><p>Clack.Handler.Hunchentoot is a Clack handler for Hunchentoot, Lisp web server. This package exports <code>run' and </code>stop'. </p><h1>AUTHOR</h1><p>Eitarow Fukamachi (e.arrows@gmail.com) </p><h1>EXTERNAL SYMBOLS</h1><ul><li>Function: run [app &amp;key debug (port 8080)]<pre> Start Hunchentoot server.</pre></li><li>Function: stop [acceptor]<pre> Stop Hunchentoot server.<br /> If no acceptor given, try to stop `*acceptor*' by default.</pre></li><li>Method: process-connection [(*acceptor* &lt;debuggable-acceptor&gt;) (socket t)]</li><li>Method: acceptor-request-dispatcher [(*acceptor* &lt;debuggable-acceptor&gt;)]</li></ul></body></html>

@@ -1,4 +1,4 @@
-<h1>NAME</h1><p>Clack.Middleware.Static - Middleware to serve static files. </p><h1>SYNOPSIS</h1><pre><code>(run  
+<html><head><link href="doc.css" rel="stylesheet" type="text/css"></head><body><h1>NAME</h1><p>Clack.Middleware.Static - Middleware to serve static files. </p><h1>SYNOPSIS</h1><pre><code>(run  
   (builder  
    (&lt;clack-middleware-static&gt;  
     :path "/public/"  
@@ -14,4 +14,4 @@
     :path (lambda (path) (and (ppcre:scan path "^/public/")  
                           (subseq path 7)))  
     :root #p"/static-files/")  
-   app)) </code></pre><h1>AUTHOR</h1><ul><li>Eitarow Fukamachi (e.arrows@gmail.com)</li></ul><h1>SEE ALSO</h1><ul><li>Clack.App.File</li></ul><h1>EXTERNAL SYMBOLS</h1><ul><li>Class: &lt;clack-middleware-static&gt; inherits (&lt;middleware&gt;) [app path root]</li><li>Method: call [(this &lt;clack-middleware-static&gt;) req]</li></ul>
+   app)) </code></pre><h1>AUTHOR</h1><ul><li>Eitarow Fukamachi (e.arrows@gmail.com)</li></ul><h1>SEE ALSO</h1><ul><li>Clack.App.File</li></ul><h1>EXTERNAL SYMBOLS</h1><ul><li>Class: &lt;clack-middleware-static&gt; inherits (&lt;middleware&gt;) [app path root]</li><li>Method: call [(this &lt;clack-middleware-static&gt;) req]</li></ul></body></html>
