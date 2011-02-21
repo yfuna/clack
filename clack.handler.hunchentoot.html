@@ -1,4 +1,4 @@
-<html><head><link href="doc.css" rel="stylesheet" type="text/css"></head><body><h1>Clack.Handler.Hunchentoot - Clack handler for Hunchentoot. </h1><h2>SYNOPSIS</h2><pre><code>(defpackage clack-test  
+<html><head><title>Clack.Handler.Hunchentoot - Clack API Reference</title><link href="doc.css" rel="stylesheet" type="text/css"></head><body><h1>Clack.Handler.Hunchentoot - Clack handler for Hunchentoot. </h1><h2>SYNOPSIS</h2><pre><code>(defpackage clack-test  
   (:use :cl  
         :clack.handler.hunchentoot))  
 (in-package :clack-test)  
@@ -6,4 +6,4 @@
 ;; Start Server  
 (run (lambda (req)  
        '(200 nil ("ok")))  
-     :port 8080) </code></pre><h2>DESCRIPTION</h2><p>Clack.Handler.Hunchentoot is a Clack handler for Hunchentoot, Lisp web server. This package exports <code>run' and </code>stop'. </p><h2>AUTHOR</h2><p>Eitarow Fukamachi (e.arrows@gmail.com) </p><h2>EXTERNAL SYMBOLS</h2><ul><li>Function: run [app &amp;key debug (port 8080)]<pre> Start Hunchentoot server.</pre></li><li>Function: stop [acceptor]<pre> Stop Hunchentoot server.<br /> If no acceptor given, try to stop `*acceptor*' by default.</pre></li><li>Method: process-connection [(*acceptor* &lt;debuggable-acceptor&gt;) (socket t)]</li><li>Method: acceptor-request-dispatcher [(*acceptor* &lt;debuggable-acceptor&gt;)]</li></ul></body></html>
+     :port 8080) </code></pre><h2>DESCRIPTION</h2><p>Clack.Handler.Hunchentoot is a Clack handler for Hunchentoot, Lisp web server. This package exports <code>run' and </code>stop'. </p><h2>AUTHOR</h2><p>Eitarow Fukamachi (e.arrows@gmail.com) </p><h2>EXTERNAL SYMBOLS</h2><div class="symbol"> <ul><li>Function: <strong>run</strong> [app &amp;key debug (port 8080)]<pre> Start Hunchentoot server.</pre></li><li>Function: <strong>stop</strong> [acceptor]<pre> Stop Hunchentoot server.<br /> If no acceptor given, try to stop `*acceptor*' by default.</pre></li><li>Method: <strong>process-connection</strong> [(*acceptor* &lt;debuggable-acceptor&gt;) (socket t)]</li><li>Method: <strong>acceptor-request-dispatcher</strong> [(*acceptor* &lt;debuggable-acceptor&gt;)] </div>  </li></ul></body></html>
