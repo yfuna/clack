@@ -1,6 +1,0 @@
-<html><head><title>Clack.App.File - Clack API Reference</title><link href="doc.css" rel="stylesheet" type="text/css"></head><body><h1>Clack.App.File - Serve static files. </h1><h2>SYNOPSIS</h2><pre><code>;; THIS IS JUST FOR EXAMPLE  
-(clackup (&lt;clack-app-file&gt;  
-          :root #p"./static-files/"))  
- 
-;; Then access 'http://localhost/jellyfish.jpg' through into local './static-files/jellyfish.jpg'.  
-;; If the file isn't found, 404 will be returned. </code></pre><h2>DESCRIPTION</h2><p>Clack.App.File serves static files in local directory. This Application should be used in other Middleware or Application (ex. Clack.Middleware.Static). </p><h2>AUTHOR</h2><p>Eitarow Fukamachi (e.arrows@gmail.com) </p><h2>SEE ALSO</h2><ul><li>Clack.Middleware.Static</li></ul><h2>EXTERNAL SYMBOLS</h2><div class="symbol"> <ul><li>Class: <strong>&lt;clack-app-file&gt;</strong> inherits (&lt;component&gt;)<pre> Clack Application to serve static files.</pre></li></ul><dl><dt> <strong> file</strong>  Accessor: file</small> </dt> <dt> <strong> root</strong>  Accessor: root</small> </dt> <dt> <strong> encoding</strong>  Accessor: encoding</small> </dt> </dl>  <ul><li>Method: <strong> call</strong>  [(this &lt;clack-app-file&gt;) req] </div>  </li></ul></body></html>
