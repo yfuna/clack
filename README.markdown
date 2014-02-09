@@ -38,7 +38,7 @@ Clack is available on [Quicklisp](http://www.quicklisp.org/beta/).
 
 ## Middleware
 
-Middleware is a type of Clack components, which takes an application as an arugements and runs it.
+Middleware is a type of Clack components, which modifies behaviour of a Clack application without modifyin the Clack application's code.
 
 ### Bundle Middleware
 
