@@ -38,7 +38,7 @@ Clack is available on [Quicklisp](http://www.quicklisp.org/beta/).
 
 ## Middleware
 
-Middleware is a type of Clack components, which modifies behaviour of a Clack application without modifyin the Clack application's code.
+Middleware is a type of Clack components, which modifies the behavior of a Clack application without modifyin the Clack application's code.
 
 ### Bundle Middleware
 
@@ -52,7 +52,7 @@ Middleware is a type of Clack components, which modifies behaviour of a Clack ap
 ### Contrib Middleware
 
 * [Clack.Middleware.Dbi](http://quickdocs.org/clack/api#system-clack-middleware-dbi) - manages CL-DBI connections
-* [Clack.Middleware.Csrf](http://quickdocs.org/clack/api#system-clack-middleware-csrf) - Provides easy way to protect an application from CSRF attacks
+* [Clack.Middleware.Csrf](http://quickdocs.org/clack/api#system-clack-middleware-csrf) - provides an easy way to protect an application from CSRF attacks
 * [Clack.Middleware.Clsql](http://quickdocs.org/clack/api#system-clack-middleware-clsql) - manages CLSQL connections
 * [Clack.Middleware.Postmodern](http://quickdocs.org/clack/api#system-clack-middleware-postmodern) - manages POSTMODERN connections
 * [Clack.Middleware.Rucksack](http://quickdocs.org/clack/api#system-clack-middleware-rucksack) - wraps Rucksack transaction.
