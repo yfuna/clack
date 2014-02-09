@@ -30,14 +30,16 @@
 
 @export
 (defun start ()
-  "Clear the docstring of `*package*'.
-I recommend you to put `(doc:start)' before calling doc functions,
-because they append sections duplicately when the packaged is reloaded."
+  "Clears the documentation string of `*package*'.
+I recommend you use `(doc:start)' before calling any clack.util.doc
+functions, because, otherwise, they append sections already in the
+string when the package is reloaded."
   (setf (documentation *package* t) ""))
 
 @export
 (defun doc (header &optional (string "") (level 1))
-  "Set documentation to current package"
+  "Appends a section with HEADER to the documentation string of the
+current package."
   (setf (documentation *package* t)
         (concatenate 'string
                      (documentation *package* t)
@@ -45,6 +47,8 @@ because they append sections duplicately when the packaged is reloaded."
 
 @export
 (defun section (header &optional (string "") (level 1))
+  "Returns a string in the Clack's section format, using HEADER for 
+the header and STRING as its content."
   (format nil "~:[~;~:*~V@{~A~:*~}~* ~A~2&~]~A~2&"
           level "#" header (string-left-trim #(#\Newline) string)))
 
@@ -77,11 +81,11 @@ Clack.Util.Doc - For writing Clack documentations.
     \")
     
     (doc:DESCRIPTION \"
-    Clack is a Web Application Environment for Common Lisp inspired by Python's WSGI and Ruby's Rack. Your awesome framework should base on this.
+    Clack is a Web application environment for Common Lisp inspired by Python's WSGI and Ruby's Rack. Your awesome framework should base on this.
     \")
 
-    ;; I recommend to use with cl-annot (https://github.com/arielnetworks/cl-annot).
-    ;; It allows you to write docs by annotation-style.
+    ;; I recommend using Clack.Util.Doc with cl-annot (https://github.com/arielnetworks/cl-annot).
+    ;; It enables you to write docs with annotation-style.
     (cl-annot:enable-annot-syntax)
     
     (doc:start)
@@ -92,7 +96,7 @@ Clack.Util.Doc - For writing Clack documentations.
 "
 
 @doc::DESCRIPTION "
-Clack.Util.Doc enables easy writing package documentations with Markdown.
+Clack.Util.Doc enables you to write packabe documentation easy writing package documentations with a markdown-like syntax.
 "
 
 @doc::AUTHOR "
