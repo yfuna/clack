@@ -165,7 +165,7 @@ Clack.Util - Utilities for Clack core and middleware development.
 "
 
 @doc:DESCRIPTION "
-Most of the time, Clack uses other utility libraries such as Alexandria, but I realized they were not enough for Clack.
+Most of the time, Clack uses other utility libraries such as Alexandria, but I realized they were not sufficient for Clack.
 
 See each description of these functions for the details.
 "
